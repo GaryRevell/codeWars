@@ -90,11 +90,10 @@ def data_reverse_orig(data):
 
     return arr2
 
-def data_reverse(data):
+def data_reverse(data):                         # refactored
     arr1 = [[data[int(y * 8 + x)] for x in range(0, 8)] for y in range(0, int(len(data) / 8))][::-1]
-    arr2 = [arr1[y][x] for y in range(0, len(arr1)) for x in range(0, 8)]
 
-    return arr2
+    return [arr1[y][x] for y in range(0, len(arr1)) for x in range(0, 8)]
 
 """
 Write Number in Expanded Form
